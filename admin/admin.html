@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-panel">
+        <div class="sidebar">
+          <h2>Admin Panel</h2>
+          <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Users</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Settings</a></li>
+          </ul>
+        </div>
+        <div class="content">
+            <div class="navbar">
+                <div class="search"><a href="../index.html">Back TO Main Site</a></div>
+            </div>
+            <div class="user-table">
+                <table>
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>Food</th>
+                        <th>Delivery</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>JohnDoe</td>
+                        <td>Pizza</td>
+                        <td>Yes</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>JaneSmith</td>
+                        <td>Sushi</td>
+                        <td>No</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>MikeJohnson</td>
+                        <td>Burger</td>
+                        <td>Yes</td>
+                      </tr>
+                      <!-- Add more rows as needed -->
+                    </tbody>
+                  </table>                
+            </div>
+            <div class="add-form">
+                <div class="container">
+                    <h2>Add Food</h2>
+                    <form>
+                      <div class="form-group">
+                        <label for="food-image">Food Image:</label>
+                        <input type="file" id="food-image" accept="image/*">
+                      </div>
+                      <div class="form-group">
+                        <label for="food-name">Food Name:</label>
+                        <input type="text" id="food-name" placeholder="Enter food name">
+                      </div>
+                      <div class="form-group">
+                        <label for="food-price">Food Price:</label>
+                        <input type="number" id="food-price" placeholder="Enter food price">
+                      </div>
+                      <div class="form-group">
+                        <input type="submit" value="Add Food">
+                      </div>
+                    </form>
+            </div>
+      </div>
+</body>
+</html>

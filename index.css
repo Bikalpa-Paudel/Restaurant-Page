@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Roboto';
+}
+/* Nav bar css */
+header{
+    position: sticky;
+    top: 0px;
+    background-color: #000000;
+    z-index: 100;
+    
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #CFD2C6;
+    padding: 30px 10px 30px 10px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin: 0 10px 0 10px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #FFF;
+}
+.menu-toggle {
+    cursor: pointer;
+    display: none;
+  }
+  
+  .menu-toggle span {
+    display: block;
+    height: 2px;
+    width: 20px;
+    background-color: #ffffff;
+    margin-bottom: 4px;
+  }
+#home{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('home.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    opacity: .9;
+    padding: 0 8% 0 8%;
+}
+.svg{
+    width: 35%;
+    animation: plate 15s linear infinite;
+    transform-origin:center;
+}
+.hero-container{
+    display: flex;
+    align-items: center;
+    height: 500px;
+}
+.hero-content{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #CFD2C6;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+img{
+    width: 100%;
+}
+
+@keyframes plate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/* about section animation */
+#about{
+    background-color: #B7BCA9;
+    padding: 0 8% 0 8%;
+}
+.about-top{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+}
+.about-title{
+    font-size: 2rem;
+    flex: 1;
+}
+
+.about-para{
+    flex:3;
+    text-align: justify;
+}
+
+.about-slide{
+    padding: 2rem 0 2rem 0;
+    display: flex;
+    height: 400px;
+    gap: 2rem;
+    overflow-x: scroll;
+}
+.food{
+    height: 100%;
+}
+#team{
+    background-color: #B7BCA9;
+    padding: 0 8% 0 8%;
+}
+.team-slide{
+    padding: 2rem 0 2rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+.team-info{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    gap: 15px;
+}
+.team{
+    height: 100%;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* even section */
+#event{
+    background-color: #B7BCA9;
+    padding: 0 8% 0 8%;
+}
+.event-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.event-title{
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 2rem;
+}
+.event-img{
+    transition: all .3s linear;
+    position: relative;
+    color: transparent;
+}
+.event-content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: 700;
+}
+.event-img:hover{
+    background-color: #323232;
+    opacity: .6;
+    color: #FFF;
+}
+
+/* Contact form design */
+#contact{
+    padding: 0 8% 0 8%;
+    background-color: #B7BCA9;
+}
+.contact-form {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .contact-form h2 {
+    text-align: center;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+    border-radius: 3px;
+  }
+  
+  .contact-form input[type="submit"] {
+    background-color: black;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .contact-form input[type="submit"]:hover {
+    background-color: transparent;
+    border: 2px solid black;
+  }
+@media screen and (max-width:800px){
+    .event-grid{
+        grid-template-columns: 1fr;
+    }
+    .team-slide{
+        flex-wrap: wrap;
+    }
+    .menu-toggle{
+        display: inline-block;
+    }
+    nav ul{
+        display: none;
+    }
+    
+    .ham nav{
+        flex-direction: column;
+    }
+    .ham nav ul{
+        display: block;
+
+    }
+    .ham nav ul li{
+        padding: 1rem;
+        text-align: center;
+    }
+    .ham .logo{
+        display: none;
+    }
+}
